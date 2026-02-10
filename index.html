@@ -10,6 +10,9 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script>
+      // Shim process.env for browser compatibility
+      window.process = { env: { API_KEY: '' } };
+      
       tailwind.config = {
         darkMode: 'media',
         theme: {
@@ -66,9 +69,12 @@
   }
 }
 </script>
+<!-- Babel Standalone for in-browser compilation -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
   <body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 antialiased min-h-screen transition-colors duration-200">
     <div id="root"></div>
-    <script type="module" src="./index.tsx"></script>
+    <!-- Load entry point with Babel and explicit presets -->
+    <script type="text/babel" data-presets="typescript,react" data-type="module" src="./index.tsx"></script>
   </body>
 </html>

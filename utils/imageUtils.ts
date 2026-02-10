@@ -1,4 +1,4 @@
-import { CompressionSettings } from '../types';
+import { CompressionSettings } from '../types.ts';
 
 export const formatFileSize = (bytes: number): string => {
   if (bytes === 0) return '0 Bytes';

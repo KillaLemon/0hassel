@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { UploadCloud, Download, FileImage, Trash2, RefreshCw, AlertCircle, ShieldCheck, Lock, HardDrive, Zap, Save, Globe, Cpu, EyeOff, Mail, ArrowRight } from 'lucide-react';
-import { Header } from './components/Header';
-import { AdSpace } from './components/AdSpace';
-import { CompressionControls } from './components/CompressionControls';
-import { compressImage, formatFileSize } from './utils/imageUtils';
-import { CompressionSettings, ImageState } from './types';
+import { Header } from './components/Header.tsx';
+import { AdSpace } from './components/AdSpace.tsx';
+import { CompressionControls } from './components/CompressionControls.tsx';
+import { compressImage, formatFileSize } from './utils/imageUtils.ts';
+import { CompressionSettings, ImageState } from './types.ts';
 
 const INITIAL_SETTINGS: CompressionSettings = {
   quality: 0.8,

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Settings, Sliders, Smartphone, Image as ImageIcon, Maximize2, MoveHorizontal, Check } from 'lucide-react';
-import { CompressionSettings, ResizeUnit } from '../types';
+import { CompressionSettings, ResizeUnit } from '../types.ts';
 
 interface ControlsProps {
   settings: CompressionSettings;
